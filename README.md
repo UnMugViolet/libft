@@ -2,7 +2,6 @@
 
 <p align="center">
 	<img src="img/libftm.png" alt="Libft Badge" width="15%">
-	test
 </p>
 
 Libft is a custom implementation of standard C library functions, created as part of the 42 school curriculum. This project aims to deepen understanding of C programming by recreating essential functions and adding additional utility functions.
