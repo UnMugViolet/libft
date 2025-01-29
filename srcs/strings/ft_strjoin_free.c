@@ -6,11 +6,11 @@
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 17:46:26 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/22 12:35:19 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/01/29 15:14:17 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str_utils.h"
 
 char	*ft_strjoin_free(char *s1, char *s2)
 {

@@ -6,11 +6,11 @@
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:43:12 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/29 14:25:18 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/01/29 15:11:04 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "conversions.h"
 
 char	*ft_str_tolower(char *str)
 {

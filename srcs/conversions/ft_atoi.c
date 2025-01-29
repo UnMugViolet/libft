@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 09:58:04 by pjaguin           #+#    #+#             */
-/*   Updated: 2024/11/21 15:34:36 by pjaguin          ###   ########.fr       */
+/*   Updated: 2025/01/29 15:10:41 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "conversions.h"
 
 static int	is_overflowing(long number, int is_negative)
 {

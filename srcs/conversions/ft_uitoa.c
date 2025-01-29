@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 13:14:48 by pjaguin           #+#    #+#             */
-/*   Updated: 2024/11/21 13:33:03 by pjaguin          ###   ########.fr       */
+/*   Updated: 2025/01/29 15:11:14 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "conversions.h"
 
 static char	*ft_fill_string(char *str, unsigned long nbr)
 {

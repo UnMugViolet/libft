@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nbr_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 13:17:13 by pjaguin           #+#    #+#             */
-/*   Updated: 2024/11/21 13:22:10 by pjaguin          ###   ########.fr       */
+/*   Updated: 2025/01/29 15:11:00 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "conversions.h"
 
 size_t	ft_nbr_len(unsigned long nbr)
 {

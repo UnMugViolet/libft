@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strings.h                                          :+:      :+:    :+:   */
+/*   str_utils.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:50:28 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/01/29 13:51:30 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/01/29 15:16:42 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRINGS_H
-# define STRINGS_H
+#ifndef STR_UTILS_H
+# define STR_UTILS_H
 
 # include "libft.h"
 
