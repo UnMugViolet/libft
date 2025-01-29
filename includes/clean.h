@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   clean.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:07:27 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/29 14:18:44 by unmugviolet      ###   ########.fr       */
+/*   Created: 2025/01/29 13:30:14 by unmugviolet       #+#    #+#             */
+/*   Updated: 2025/01/29 13:54:35 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef CLEAN_H
+# define CLEAN_H
 
-# include <fcntl.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdbool.h>
+# include "libft.h"
 
-# include "checks.h"
-# include "conversions.h"
-# include "memory.h"
-# include "print.h"
-# include "strings.h"
-# include "sort.h"
-# include "linked_list.h"
+void	ft_free_split(char **array);
 
 #endif

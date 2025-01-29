@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_str_tolower.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:07:27 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/29 14:18:44 by unmugviolet      ###   ########.fr       */
+/*   Created: 2024/11/21 17:43:12 by pjaguin           #+#    #+#             */
+/*   Updated: 2025/01/29 14:25:18 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <fcntl.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdbool.h>
+char	*ft_str_tolower(char *str)
+{
+	size_t	i;
+	char	*ptr;
 
-# include "checks.h"
-# include "conversions.h"
-# include "memory.h"
-# include "print.h"
-# include "strings.h"
-# include "sort.h"
-# include "linked_list.h"
-
-#endif
+	i = -1;
+	if (!str)
+		return (NULL);
+	ptr = malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (!ptr)
+		return (NULL);
+	while (str[++i])
+		ptr[i] = ft_tolower(str[i]);
+	ptr[i] = 0;
+	return (ptr);
+}

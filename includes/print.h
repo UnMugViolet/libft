@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:07:27 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/29 14:18:44 by unmugviolet      ###   ########.fr       */
+/*   Created: 2025/01/29 13:45:30 by unmugviolet       #+#    #+#             */
+/*   Updated: 2025/01/29 13:51:30 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef PRINT_H
+# define PRINT_H
 
-# include <fcntl.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdbool.h>
+# include "libft.h"
 
-# include "checks.h"
-# include "conversions.h"
-# include "memory.h"
-# include "print.h"
-# include "strings.h"
-# include "sort.h"
-# include "linked_list.h"
+size_t	ft_count_putchar_fd(char c, int fd);
+size_t	ft_count_putstr_fd(char *str, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *str, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *str, int fd);
 
 #endif

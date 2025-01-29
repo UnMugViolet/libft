@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   checks.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 13:07:27 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/29 14:18:44 by unmugviolet      ###   ########.fr       */
+/*   Created: 2025/01/29 13:37:28 by unmugviolet       #+#    #+#             */
+/*   Updated: 2025/01/29 13:57:17 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef CHECKS_H
+# define CHECKS_H
 
-# include <fcntl.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdbool.h>
+# include "libft.h"
 
-# include "checks.h"
-# include "conversions.h"
-# include "memory.h"
-# include "print.h"
-# include "strings.h"
-# include "sort.h"
-# include "linked_list.h"
+int	ft_is_whitespace(int c);
+int	ft_isalnum(int c);
+int	ft_isalpha(int c);
+int	ft_isascii(int c);
+int	ft_isdigit(int c);
+int	ft_isprint(int c);
 
 #endif
