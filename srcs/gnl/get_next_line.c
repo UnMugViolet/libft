@@ -6,7 +6,7 @@
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 18:19:43 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/22 18:07:36 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/01/30 16:45:39 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,10 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = ft_get_line(main_str[fd]);
 	main_str[fd] = ft_get_next_content(main_str[fd]);
+	if (!main_str[fd] || !*main_str[fd])
+	{
+		free(main_str[fd]);
+		main_str[fd] = NULL;
+	}
 	return (line);
 }
