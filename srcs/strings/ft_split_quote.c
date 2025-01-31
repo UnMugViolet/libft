@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split_quote.c                                     :+:      :+:    :+:   */
+/*   ft_split_quote.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:43:12 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/31 09:36:04 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/01/31 11:54:45 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,14 @@ static size_t	ft_word_len(const char *str, char c, char quote)
 		if (str[i] == quote)
 			in_quote = !in_quote;
 		else if (!in_quote && str[i] == c)
-			break;
+			break ;
 		size++;
 		i++;
 	}
 	return (size);
 }
 
-static char	**write_split(char **array, const char *str, char c,
-		char quote)
+static char	**write_split(char **array, const char *str, char c, char quote)
 {
 	size_t	i;
 	size_t	word_len;
