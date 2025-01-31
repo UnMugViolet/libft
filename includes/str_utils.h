@@ -6,7 +6,7 @@
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:50:28 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/01/29 15:16:42 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/01/31 11:13:55 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft.h"
 
+char	**ft_split_quote(char const *str, char c, char quote);
 char	**ft_split(char const *str, char c);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *str);

@@ -6,7 +6,7 @@
 #    By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
-#    Updated: 2025/01/29 14:26:54 by unmugviolet      ###   ########.fr        #
+#    Updated: 2025/01/31 10:00:10 by unmugviolet      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ PRINT_FILES		  = ft_count_putchar_fd.c ft_count_putstr_fd.c ft_putchar_fd.c ft_p
 SORT_FILES		  = ft_reverse.c
 
 STRINGS_FILES	  = ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin_free.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
-					ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c
+					ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_split_quote.c
 
 LINKED_LIST_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 					ft_lstmap.c ft_sclst_size.c ft_sclst_max.c ft_sclst_min.c ft_sclst_clean.c ft_sclst_print.c
