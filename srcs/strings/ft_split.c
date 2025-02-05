@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:43:12 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/31 11:49:21 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/02/05 18:27:00 by pjaguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static char	**write_split(char **array, const char *str, char c,
 			str++;
 		array[i] = (char *)ft_calloc(sizeof(char), word_len + 1);
 		if (!array[i])
-			return (ft_free_split(array), NULL);
+			return (ft_free_array_str(array), NULL);
 		ft_strlcpy(array[i], str, word_len + 1);
 		str += word_len;
 		i++;

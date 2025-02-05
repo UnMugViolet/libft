@@ -6,7 +6,7 @@
 #    By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
-#    Updated: 2025/02/05 11:18:05 by pjaguin          ###   ########.fr        #
+#    Updated: 2025/02/05 18:25:45 by pjaguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ BASE_FILES	 	  = ft_atoi_base.c ft_itoa_base.c ft_uitoa_base.c ft_ulitoa_base.c 
 
 CHECKS_FILES 	  = ft_is_whitespace.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c 
 
-CLEAN_FILES 	  = ft_free_split.c
+CLEAN_FILES 	  = ft_free_array_str.c
 
 CONVERSIONS_FILES = ft_atoi.c ft_itoa.c ft_nbr_len.c ft_str_tolower.c ft_str_toupper.c ft_tolower.c ft_toupper.c ft_uitoa.c
 
