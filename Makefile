@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+         #
+#    By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
-#    Updated: 2025/02/04 18:53:29 by unmugviolet      ###   ########.fr        #
+#    Updated: 2025/02/05 11:18:05 by pjaguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ STRINGS_FILES	  = ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin_fr
 					ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_split_quote.c ft_substr_free.c \
 
 LINKED_LIST_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-					ft_lstmap.c ft_sclst_size.c ft_sclst_max.c ft_sclst_min.c ft_sclst_clean.c ft_sclst_print.c
+					ft_lstmap.c ft_sclst_size.c ft_sclst_max.c ft_sclst_min.c ft_sclst_clean.c ft_sclst_print.c ft_sclst_last.c ft_sclst_addback.c \
+					ft_sclst_new.c
 
 GNL_FILES = get_next_line.c get_next_line_utils.c
 

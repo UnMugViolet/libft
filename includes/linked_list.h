@@ -6,7 +6,7 @@
 /*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 10:37:45 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/14 11:11:32 by pjaguin          ###   ########.fr       */
+/*   Updated: 2025/02/05 11:23:19 by pjaguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,13 @@ typedef struct s_sclist
 	struct s_sclist	*next;
 }					t_sclist;
 
-int					ft_sclst_size(t_sclist *sclist);
+void				ft_sclst_addback(t_sclist **stack, t_sclist *new);
 void				ft_sclst_clean(t_sclist **sclst);
-void				ft_sclst_print(t_sclist **sclst, char c);
+t_sclist			*ft_sclst_last(t_sclist *stack);
 int					ft_sclst_max(t_sclist *sclist);
 int					ft_sclst_min(t_sclist *sclist);
+t_sclist			*ft_sclst_new(int content);
+void				ft_sclst_print(t_sclist **sclst, char c);
+int					ft_sclst_size(t_sclist *sclist);
 
 #endif
