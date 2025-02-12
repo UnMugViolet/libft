@@ -6,7 +6,7 @@
 #    By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
-#    Updated: 2025/02/05 18:25:45 by pjaguin          ###   ########.fr        #
+#    Updated: 2025/02/12 17:52:47 by pjaguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ CHECKS_FILES 	  = ft_is_whitespace.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_i
 
 CLEAN_FILES 	  = ft_free_array_str.c
 
-CONVERSIONS_FILES = ft_atoi.c ft_itoa.c ft_nbr_len.c ft_str_tolower.c ft_str_toupper.c ft_tolower.c ft_toupper.c ft_uitoa.c
+CONVERSIONS_FILES = ft_atoi.c ft_itoa.c ft_nbr_len.c ft_str_tolower.c ft_str_toupper.c ft_tolower.c ft_toupper.c ft_uitoa.c ft_atodbl.c
 
 MEMORY_FILES 	  = ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
 

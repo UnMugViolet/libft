@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   conversions.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:41:33 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/01/29 14:25:50 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/02/12 17:58:45 by pjaguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft.h"
 
+double	ft_atodbl(const char *str);
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 size_t	ft_nbr_len(unsigned long nbr);
