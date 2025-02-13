@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+         #
+#    By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
-#    Updated: 2025/02/12 17:52:47 by pjaguin          ###   ########.fr        #
+#    Updated: 2025/02/13 21:04:46 by unmugviolet      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ STRINGS_DIR = ./srcs/strings/
 LINKED_LIST_DIR = ./srcs/linked_list/
 FT_PRINTF_DIR = ./srcs/ft_printf/
 GNL_DIR = ./srcs/gnl/
+MATHS_DIR = ./srcs/maths/
 
 INC_DIR = ./includes/
 OBJ_DIR = ./objects/
@@ -37,7 +38,7 @@ CHECKS_FILES 	  = ft_is_whitespace.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_i
 
 CLEAN_FILES 	  = ft_free_array_str.c
 
-CONVERSIONS_FILES = ft_atoi.c ft_itoa.c ft_nbr_len.c ft_str_tolower.c ft_str_toupper.c ft_tolower.c ft_toupper.c ft_uitoa.c ft_atodbl.c
+CONVERSIONS_FILES = ft_atoi.c ft_itoa.c ft_nbr_len.c ft_str_tolower.c ft_str_toupper.c ft_tolower.c ft_toupper.c ft_uitoa.c ft_atod.c ft_dtoa.c
 
 MEMORY_FILES 	  = ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
 
@@ -52,9 +53,11 @@ LINKED_LIST_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_l
 					ft_lstmap.c ft_sclst_size.c ft_sclst_max.c ft_sclst_min.c ft_sclst_clean.c ft_sclst_print.c ft_sclst_last.c ft_sclst_addback.c \
 					ft_sclst_new.c
 
+MATHS_FILES = ft_pow.c ft_round.c
+
 GNL_FILES = get_next_line.c get_next_line_utils.c
 
-FT_PRINTF_FILES = ft_printf.c ft_printf_utils.c
+FT_PRINTF_FILES = ft_printf.c ft_printf_utils.c ft_printf_utils2.c
 
 
 OBJ = $(addprefix $(OBJ_DIR), $(FILES:.c=.o)) \
@@ -69,6 +72,7 @@ OBJ = $(addprefix $(OBJ_DIR), $(FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(GNL_FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(FT_PRINTF_FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(LINKED_LIST_FILES:.c=.o)) \
+	  $(addprefix $(OBJ_DIR), $(MATHS_FILES:.c=.o)) \
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -128,6 +132,10 @@ $(OBJ_DIR)%.o: $(GNL_DIR)%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
 
 $(OBJ_DIR)%.o: $(LINKED_LIST_DIR)%.c | $(OBJ_DIR)
+	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
+	@$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
+
+$(OBJ_DIR)%.o: $(MATHS_DIR)%.c | $(OBJ_DIR)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
 	

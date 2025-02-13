@@ -6,7 +6,7 @@
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:07:27 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/01/29 15:17:08 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/02/13 20:41:56 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # include "str_utils.h"
 # include "sort.h"
 # include "linked_list.h"
+# include "maths.h"
 # include "clean.h"
 
 #endif

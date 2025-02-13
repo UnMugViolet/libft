@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 14:03:07 by pjaguin           #+#    #+#             */
-/*   Updated: 2024/12/06 14:55:36 by pjaguin          ###   ########.fr       */
+/*   Updated: 2025/02/13 19:13:07 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ size_t	ft_check_type(va_list args, char c)
 		print_len += ft_print_unsigned_count(va_arg(args, unsigned int));
 	else if (c == 'x' || c == 'X')
 		print_len += ft_count_puthex_base_fd(va_arg(args, unsigned int), c, 1);
+	else if (c == 'f')
+		print_len += ft_print_float_count(va_arg(args, double));
 	else if (c == '%')
 		print_len += ft_count_putchar_fd('%', 1);
 	return (print_len);

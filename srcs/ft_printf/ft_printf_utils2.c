@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conversions.h                                      :+:      :+:    :+:   */
+/*   ft_printf_utils2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 13:41:33 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/02/13 19:22:43 by unmugviolet      ###   ########.fr       */
+/*   Created: 2024/12/06 14:14:13 by pjaguin           #+#    #+#             */
+/*   Updated: 2025/02/13 20:46:50 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERSIONS_H
-# define CONVERSIONS_H
+#include "ft_printf.h"
 
-# include "libft.h"
+int	ft_print_float_count(double n)
+{
+	char	*nbr_str;
+	int		len;
 
-double	ft_atod(const char *str);
-int		ft_atoi(const char *str);
-char	*ft_dtoa(double n, int precision);
-char	*ft_itoa(int n);
-size_t	ft_nbr_len(unsigned long nbr);
-char	*ft_str_tolower(char *str);
-char	*ft_str_toupper(char *str);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-char	*ft_uitoa(unsigned int n);
-
-#endif
+	nbr_str = ft_dtoa(n, 6);
+	ft_count_putstr_fd(nbr_str, 1);
+	len = ft_strlen(nbr_str);
+	free(nbr_str);
+	return (len);
+}

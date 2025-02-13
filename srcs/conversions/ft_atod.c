@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atodbl.c                                        :+:      :+:    :+:   */
+/*   ft_atod.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:39:20 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/02/12 18:01:18 by pjaguin          ###   ########.fr       */
+/*   Updated: 2025/02/13 19:09:39 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "conversions.h"
 
-double	ft_atodbl(const char *str)
+double	ft_atod(const char *str)
 {
 	long	int_part;
 	double	fract_part;
