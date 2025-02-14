@@ -14,7 +14,7 @@
 
 double	ft_pow(int base, int power)
 {
-	double result;
+	double	result;
 
 	result = 1;
 	while (power--)
