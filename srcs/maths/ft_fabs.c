@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   maths.h                                            :+:      :+:    :+:   */
+/*   ft_fabs.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/13 20:38:59 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/02/14 18:45:47 by pjaguin          ###   ########.fr       */
+/*   Created: 2025/02/14 18:43:55 by pjaguin           #+#    #+#             */
+/*   Updated: 2025/02/14 18:45:15 by pjaguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATHS_H
-# define MATHS_H
-
-double	ft_pow(int base, int power);
-double	ft_round(double n);
-double	ft_fabs(double x);
-
-#endif
+double	ft_fabs(double x)
+{
+	if (x < 0)
+		return (-x);
+	return (x);
+}

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+         #
+#    By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
-#    Updated: 2025/02/13 21:04:46 by unmugviolet      ###   ########.fr        #
+#    Updated: 2025/02/14 18:46:00 by pjaguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ LINKED_LIST_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_l
 					ft_lstmap.c ft_sclst_size.c ft_sclst_max.c ft_sclst_min.c ft_sclst_clean.c ft_sclst_print.c ft_sclst_last.c ft_sclst_addback.c \
 					ft_sclst_new.c
 
-MATHS_FILES = ft_pow.c ft_round.c
+MATHS_FILES = ft_pow.c ft_round.c ft_fabs.c
 
 GNL_FILES = get_next_line.c get_next_line_utils.c
 
