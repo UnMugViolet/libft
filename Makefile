@@ -3,10 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+         #
+#    By: fureimu <fureimu@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2025/03/07 15:23:37 by pjaguin          ###   ########.fr        #
+=======
+#    Updated: 2025/03/11 14:27:10 by fureimu          ###   ########.fr        #
+>>>>>>> a790b96
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +30,7 @@ SORT_DIR = ./srcs/sort/
 STRINGS_DIR = ./srcs/strings/
 LINKED_LIST_DIR = ./srcs/linked_list/
 FT_PRINTF_DIR = ./srcs/ft_printf/
+FT_FPRINTF_DIR = ./srcs/ft_fprintf/
 GNL_DIR = ./srcs/gnl/
 MATHS_DIR = ./srcs/maths/
 
@@ -34,7 +39,7 @@ OBJ_DIR = ./objects/
 
 BASE_FILES	 	  = ft_atoi_base.c ft_itoa_base.c ft_uitoa_base.c ft_ulitoa_base.c ft_check_base_size.c ft_nbrlen_base.c ft_get_in_base.c \
 
-CHECKS_FILES 	  = ft_is_whitespace.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c 
+CHECKS_FILES 	  = ft_is_whitespace.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_is_charset.c
 
 CLEAN_FILES 	  = ft_free_array_str.c
 
@@ -42,7 +47,11 @@ CONVERSIONS_FILES = ft_atoi.c ft_itoa.c ft_nbr_len.c ft_str_tolower.c ft_str_tou
 
 MEMORY_FILES 	  = ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
 
+<<<<<<< HEAD
 PRINT_FILES		  = ft_count_putchar_fd.c ft_count_putstr_fd.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_print_array_str.c \
+=======
+PRINT_FILES		  = ft_count_putchar_fd.c ft_count_putstr_fd.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_print_array_str_fd.c
+>>>>>>> a790b96
 
 SORT_FILES		  = ft_reverse.c
 
@@ -59,6 +68,7 @@ GNL_FILES = get_next_line.c get_next_line_utils.c
 
 FT_PRINTF_FILES = ft_printf.c ft_printf_utils.c ft_printf_utils2.c
 
+FT_FPRINTF_FILES = ft_fprintf.c ft_fprintf_utils.c ft_fprintf_utils2.c
 
 OBJ = $(addprefix $(OBJ_DIR), $(FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(BASE_FILES:.c=.o)) \
@@ -71,6 +81,7 @@ OBJ = $(addprefix $(OBJ_DIR), $(FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(STRINGS_FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(GNL_FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(FT_PRINTF_FILES:.c=.o)) \
+	  $(addprefix $(OBJ_DIR), $(FT_FPRINTF_FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(LINKED_LIST_FILES:.c=.o)) \
 	  $(addprefix $(OBJ_DIR), $(MATHS_FILES:.c=.o)) \
 
@@ -124,6 +135,10 @@ $(OBJ_DIR)%.o: $(STRINGS_DIR)%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
 	
 $(OBJ_DIR)%.o: $(FT_PRINTF_DIR)%.c | $(OBJ_DIR)
+	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
+	@$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
+	
+$(OBJ_DIR)%.o: $(FT_FPRINTF_DIR)%.c | $(OBJ_DIR)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
 
