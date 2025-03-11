@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.h                                            :+:      :+:    :+:   */
+/*   ft_print_array_str_fd.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fureimu <fureimu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 13:45:30 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/03/11 14:29:36 by fureimu          ###   ########.fr       */
+/*   Created: 2025/03/11 14:26:25 by fureimu           #+#    #+#             */
+/*   Updated: 2025/03/11 14:28:59 by fureimu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_H
-# define PRINT_H
+#include "print.h"
 
-# include "libft.h"
+void	ft_print_array_str_fd(char **array, int fd)
+{
+	int	i;
 
-size_t	ft_count_putchar_fd(char c, int fd);
-size_t	ft_count_putstr_fd(char *str, int fd);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *str, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *str, int fd);
-void	ft_print_array_str_fd(char **array, int fd);
-
-#endif
+	i = 0;
+	if (!array)
+		return ;
+	while (array[i])
+	{
+		ft_putendl_fd(array[i], fd);
+		i++;
+	}
+}

@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.h                                            :+:      :+:    :+:   */
+/*   ft_is_charset.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fureimu <fureimu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 13:45:30 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/03/11 14:29:36 by fureimu          ###   ########.fr       */
+/*   Created: 2025/03/11 13:04:04 by fureimu           #+#    #+#             */
+/*   Updated: 2025/03/11 13:05:53 by fureimu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_H
-# define PRINT_H
+#include "checks.h"
 
-# include "libft.h"
+int	ft_is_charset(char c, char *charset)
+{
+	int	i;
 
-size_t	ft_count_putchar_fd(char c, int fd);
-size_t	ft_count_putstr_fd(char *str, int fd);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *str, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *str, int fd);
-void	ft_print_array_str_fd(char **array, int fd);
-
-#endif
+	i = -1;
+	while (charset[++i])
+		if (charset[i] == c)
+			return (1);
+	return (0);
+}
