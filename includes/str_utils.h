@@ -6,7 +6,7 @@
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:50:28 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/02/04 19:06:37 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/03/12 17:03:01 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 
 # include "libft.h"
 
+typedef struct	s_quotes
+{
+	bool		in_sgl;
+	char		single;
+	bool		in_dbl;
+	char		dbl;
+}				t_quotes;
+
+char	**ft_split_strset_quote(char const *str, char **strset, t_quotes *quotes);
 char	**ft_split_quote(char const *str, char c, char quote);
 char	**ft_split(char const *str, char c);
 char	*ft_strchr(const char *str, int c);
