@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fprintf_utils2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fureimu <fureimu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 14:14:13 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/03/11 12:59:20 by fureimu          ###   ########.fr       */
+/*   Updated: 2025/03/13 18:07:56 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ int	ft_fprint_float_count(double n, int fd)
 	free(nbr_str);
 	return (len);
 }
-
