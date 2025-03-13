@@ -12,7 +12,7 @@
 
 #include "str_utils.h"
 
-static char	*ft_get_strset(char const *str, char **strset)
+static char	*ft_get_strset(char *str, char **strset)
 {
 	int	i;
 
@@ -25,109 +25,108 @@ static char	*ft_get_strset(char const *str, char **strset)
 	return (NULL);
 }
 
-static void	ft_check_quotes(t_quotes *quotes, char c)
+static char	*ft_handle_quotes(char *str, size_t *word_count, int *is_word)
 {
-	if (c == quotes->dbl && !quotes->in_sgl)
-		quotes->in_dbl = !quotes->in_dbl;
-	if (c == quotes->single && !quotes->in_dbl)
-		quotes->in_sgl = !quotes->in_sgl;
+	if (*str == SGL_QT)
+	{
+		*word_count += 1;
+		*is_word = 0;
+		while (*(++str) != SGL_QT)
+			;
+		return (++str);
+	}
+	if (*str == DBL_QT)
+	{
+		*word_count += 1;
+		*is_word = 0;
+		while (*(++str) != DBL_QT)
+			;
+		return (++str);
+	}
+	return (++str);
 }
 
-static size_t	count_words(char const *str, char **strset, t_quotes *quotes)
+static size_t	ft_count_words(char *str, char **strset)
 {
-	size_t	i;
 	int		is_word;
 	size_t	words_count;
 
-	i = -1;
 	is_word = 0;
 	words_count = 0;
-	while (str[++i])
+	while (*str)
 	{
-		ft_check_quotes(quotes, str[i]);
-		if (!quotes->in_sgl && !quotes->in_dbl && ft_get_strset(str + i,
-				strset))
+		if (ft_get_strset(str, strset))
 		{
 			words_count++;
-			i += ft_strlen(ft_get_strset(str + i, strset));
+			str += ft_strlen(ft_get_strset(str, strset));
 			is_word = 0;
 			continue ;
 		}
-		if (!quotes->in_sgl && !quotes->in_dbl && str[i] == ' ')
+		if (*str == ' ')
 			is_word = 0;
-		if (!is_word)
+		else if (*str && *str != SGL_QT && *str != DBL_QT && !is_word)
 		{
 			words_count++;
 			is_word = 1;
 		}
+		str = ft_handle_quotes(str, &words_count, &is_word);
 	}
 	return (words_count);
 }
 
-static size_t	ft_word_len(char const *str, char **strset, t_quotes *quotes)
+static size_t	ft_word_len(char *str, char **strset)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i])
+	if (*str == SGL_QT)
 	{
-		if (str[i] == quotes->single)
-		{
-			while (str[++i] != quotes->single)
-				;
-			return (i + 1);
-		}
-		if (str[i] == quotes->dbl)
-		{
-			while (str[++i] != quotes->dbl)
-				;
-			return (i + 1);
-		}
-		if (ft_get_strset(str, strset))
-			return ( printf("word len: %zu\nword: %s\n", ft_strlen(ft_get_strset(str, strset)), str), ft_strlen(ft_get_strset(str, strset)));
+		while (str[++i] != SGL_QT)
+			;
+		return (i + 1);
+	}
+	if (*str == DBL_QT)
+	{
+		while (str[++i] != DBL_QT)
+			;
+		return (i + 1);
+	}
+	if (ft_get_strset(str, strset))
+		return (ft_strlen(ft_get_strset(str, strset)));
+	while (str[i] && str[i] != SGL_QT && str[i] != DBL_QT)
+	{
 		if (str[i] == ' ' || (i > 0 && ft_get_strset(str + i, strset)))
 			break ;
 		i++;
 	}
-	printf("word len: %zu\nword: %s\n", i, str);
 	return (i);
 }
 
-static char	**write_split(char **array, char const *str, char **strset,
-		t_quotes *quotes)
+char	**ft_split_strset_quote(char *str, char **strset)
 {
-	size_t	i;
-	size_t	word_len;
-	size_t	word_count;
+	char			**array;
+	size_t const	word_count = ft_count_words(str, strset);
+	size_t			word_len;
+	size_t			i;
 
-	i = 0;
-	word_count = count_words(str, strset, quotes);
-	while (i < word_count)
-	{
-		while (*str == ' ' && *str != quotes->dbl && *str != quotes->single)
-			str++;
-		word_len = ft_word_len(str, strset, quotes);
-		array[i] = (char *)ft_calloc(sizeof(char), word_len + 1);
-		if (!array[i])
-			return (ft_free_array_str(array), NULL);
-		ft_strlcpy(array[i], str, word_len + 1);
-		str += word_len + 1;
-		i++;
-	}
-	array[i] = NULL;
-	return (array);
-}
-
-char	**ft_split_strset_quote(char const *str, char **strset, t_quotes *quotes)
-{
-	char		**array;
-	size_t		word_count;
-
-	word_count = count_words(str, strset, quotes);
 	if (!str)
 		return (NULL);
 	array = (char **)ft_calloc(sizeof(char *), (word_count + 1));
 	if (!array)
 		return (NULL);
-	return (write_split(array, str, strset, quotes));
+	i = 0;
+	while (i < word_count)
+	{
+		while (*str == ' ' && *str != SGL_QT && *str != DBL_QT)
+			str++;
+		word_len = ft_word_len(str, strset);
+		array[i] = (char *)ft_calloc(sizeof(char), word_len + 1);
+		if (!array[i])
+			return (ft_free_array_str(array), NULL);
+		ft_strlcpy(array[i], str, word_len + 1);
+		str += word_len;
+		i++;
+	}
+	array[i] = NULL;
+	return (array);
 }
