@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_utils.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fureimu <fureimu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yguinio <yguinio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:50:28 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/03/13 14:08:45 by fureimu          ###   ########.fr       */
+/*   Updated: 2025/03/19 10:48:15 by yguinio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr_free(char *str, unsigned int start,
 			size_t len);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
+char	**ft_str_array_dup(char **array);
 
 #endif
