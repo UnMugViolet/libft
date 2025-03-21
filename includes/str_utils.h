@@ -6,7 +6,7 @@
 /*   By: yguinio <yguinio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:50:28 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/03/19 10:48:15 by yguinio          ###   ########.fr       */
+/*   Updated: 2025/03/21 10:43:43 by yguinio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # define DBL_QT '\"'
 
 char	**ft_split_strset_quote(char *str, char **strset);
+char	**ft_split_strset(char *str, char **strset);
 char	**ft_split_quote(char const *str, char c, char quote);
 char	**ft_split(char const *str, char c);
 char	*ft_strchr(const char *str, int c);
