@@ -6,7 +6,7 @@
 /*   By: yguinio <yguinio@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:43:12 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/03/21 10:38:07 by yguinio          ###   ########.fr       */
+/*   Updated: 2025/03/21 11:18:16 by yguinio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,26 @@ static char	*ft_get_strset(char *str, char **strset)
 			return (strset[i]);
 	}
 	return (NULL);
+}
+
+static int	ft_handle_quotes(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str[i] == SGL_QT)
+	{
+		while (str[++i] != SGL_QT)
+			;
+		return (++i);
+	}
+	if (str[i] == DBL_QT)
+	{
+		while (str[++i] != DBL_QT)
+			;
+		return (++i);
+	}
+	return (++i);
 }
 
 static size_t	ft_count_words(char *str, char **strset)
@@ -48,7 +68,7 @@ static size_t	ft_count_words(char *str, char **strset)
 			words_count++;
 			is_word = 1;
 		}
-		str++;
+		str += ft_handle_quotes(str);
 	}
 	return (words_count);
 }
@@ -60,8 +80,13 @@ static size_t	ft_word_len(char *str, char **strset)
 	i = 0;
 	if (ft_get_strset(str, strset))
 		return (ft_strlen(ft_get_strset(str, strset)));
-	while (str[i] && str[i] != SGL_QT && str[i] != DBL_QT)
+	while (str[i])
 	{
+		if (str[i] == SGL_QT || str[i] == DBL_QT)
+		{
+			i += ft_handle_quotes(str + i);
+			continue ;
+		}
 		if (str[i] == ' ' || (i > 0 && ft_get_strset(str + i, strset)))
 			break ;
 		i++;
