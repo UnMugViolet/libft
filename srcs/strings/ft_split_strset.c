@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split_strset.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yguinio <yguinio@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:43:12 by pjaguin           #+#    #+#             */
-/*   Updated: 2025/03/21 11:18:16 by yguinio          ###   ########.fr       */
+/*   Updated: 2025/03/26 11:37:00 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static size_t	ft_count_words(char *str, char **strset)
 
 	is_word = 0;
 	words_count = 0;
-	while (*str)
+	while (str && *str)
 	{
 		if (ft_get_strset(str, strset))
 		{
