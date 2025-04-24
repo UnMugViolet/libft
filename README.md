@@ -55,7 +55,7 @@ make
 
 This will generate the `libft.a` library file, which you can link against in your projects.
 
-## License
+## ⚖️ License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
