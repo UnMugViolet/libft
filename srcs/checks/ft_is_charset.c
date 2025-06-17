@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_charset.c                                    :+:      :+:    :+:   */
+/*   ft_ischarset.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pjaguin <pjaguin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 13:04:04 by fureimu           #+#    #+#             */
-/*   Updated: 2025/06/12 11:27:51 by pjaguin          ###   ########.fr       */
+/*   Updated: 2025/06/17 09:34:01 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 *	If no charset provided it returns false
 *	@return(bool)
 */
-bool	ft_is_charset(char c, char *charset)
+bool	ft_ischarset(char c, char *charset)
 {
 	int	i;
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yguinio <yguinio@student.42.fr>            +#+  +:+       +#+         #
+#    By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 13:05:36 by pjaguin           #+#    #+#              #
-#    Updated: 2025/03/21 10:41:47 by yguinio          ###   ########.fr        #
+#    Updated: 2025/06/17 09:36:20 by unmugviolet      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ OBJ_DIR = ./objects/
 
 BASE_FILES	 	  = ft_atoi_base.c ft_itoa_base.c ft_uitoa_base.c ft_ulitoa_base.c ft_check_base_size.c ft_nbrlen_base.c ft_get_in_base.c \
 
-CHECKS_FILES 	  = ft_is_whitespace.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_is_charset.c
+CHECKS_FILES 	  = ft_is_whitespace.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_ischarset.c
 
 CLEAN_FILES 	  = ft_free_array_str.c
 
