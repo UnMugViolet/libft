@@ -6,7 +6,7 @@
 /*   By: unmugviolet <unmugviolet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:37:28 by unmugviolet       #+#    #+#             */
-/*   Updated: 2025/06/17 09:36:20 by unmugviolet      ###   ########.fr       */
+/*   Updated: 2025/06/17 12:02:44 by unmugviolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-bool	ft_ischarset(char c, char *charset);
+bool	ft_is_charset(char c, char *charset);
 
 #endif
